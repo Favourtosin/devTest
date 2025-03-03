@@ -25,7 +25,7 @@ const CalendarCard: React.FC<CalendarCardProps> = ({
 
   return (
     <motion.div
-      className="bg-white rounded-lg shadow-[0px_0px_0px_1px_#09090B0D] p-4 overflow-hidden cursor-pointer"
+      className="bg-white rounded-[18px] shadow-[0px_0px_0px_1px_#09090B0D] p-4 overflow-hidden cursor-pointer"
       initial={{
         width: 200,
         scale: 1,
@@ -33,7 +33,7 @@ const CalendarCard: React.FC<CalendarCardProps> = ({
         transformOrigin: "bottom right",
       }}
       animate={{
-        width: isExpanded ? 482 : 200,
+        width: isExpanded ? "80%" : 200,
         scale: isExpanded ? 1.15 : 1,
         opacity: 1,
         borderRadius: isExpanded ? "20px" : "12px",

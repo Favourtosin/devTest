@@ -8,20 +8,18 @@ export default {
   ],
   theme: {
     extend: {
-      extend: {
-        colors: {
-          grayMain: "#292929",
-          graySupport: "#737373",
-          purpleDeep: "#7839EE",
-          purpleLight: "#ECE9FECC",
-        },
-        spacing: {
-          max: "5rem",
-          min: "2rem",
-        },
-        fontFamily: {
-          inter: ["inter"],
-        },
+      colors: {
+        grayMain: "#292929",
+        graySupport: "#737373",
+        purpleDeep: "#7839EE",
+        purpleLight: "#ECE9FECC",
+      },
+      spacing: {
+        max: "5rem",
+        min: "2rem",
+      },
+      fontFamily: {
+        inter: ["inter"],
       },
     },
   },

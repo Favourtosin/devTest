@@ -21,6 +21,9 @@ export default {
       fontFamily: {
         inter: ["inter"],
       },
+      fontSize: {
+        xx: ["13px", { lineHeight: "19.5px" }],
+      },
     },
   },
   plugins: [],

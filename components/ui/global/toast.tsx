@@ -26,7 +26,7 @@ const Toast: React.FC<NotificationProps> = ({ show, setShow, message }) => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 50 }}
           className="fixed bottom-4 right-4 min-w-[320px] md:min-w-[380px] lg:min-w-[420px] flex items-center justify-between gap-4 
-            rounded-xl bg-[#FCFCFC] px-6 py-4 shadow-[0px_8px_16px_0px_#29292914] border border-[#E5E5E5B2] 
+            rounded-xl bg-[#FCFCFC] px-6 py-3 shadow-[0px_8px_16px_0px_#29292914] border 
             text-grayMain font-medium text-sm"
         >
           <div className="flex items-center gap-3">

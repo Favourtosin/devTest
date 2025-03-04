@@ -13,7 +13,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="   font-inter  p-8  ">{children}</body>
+      <body className="   font-inter  p-8 flex  flex-col  items-center  ">
+        {children}
+      </body>
     </html>
   );
 }

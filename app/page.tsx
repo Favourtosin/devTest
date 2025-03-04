@@ -1,24 +1,31 @@
 "use client";
+
 import CalendarCard from "@/components/ui/calendarCard";
-import Image from "next/image";
+import StackText from "@/components/ui/global/StackText";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className=" shadow-[0px_0px_0px_1px_#09090B0D] rounded-[32px] grid  grid-cols-1 md:grid-cols-2 min-h-[95vh]  h-full  bg-white p-6 gap-6">
-      <div className=" w-full flex  justify-center  items-center  flex-col  rounded-lg p-4">
-        <div className=" w-full md:w-[20rem] tracking-[0] ">
-          <h2 className="text-base  text-grayMain font-medium ">
-            {" "}
+    <main className="max-w-[130rem] w-full space-y-6 items-center shadow-[0px_0px_0px_1px_#09090B0D] rounded-[32px] grid grid-cols-1 md:grid-cols-2 min-h-[90vh] max-h-[40rem] h-full bg-white p-6 lg:px-8 gap-6">
+      <section className="w-full md:w-[20rem] flex flex-col items-center justify-center gap-y-3 rounded-lg">
+        <div className="flex flex-col gap-y-3 px-2 tracking-[0]">
+          <h2 className="text-base text-grayMain font-medium">
             Calendar Widget
           </h2>
-          <p className="  text-sm mt-2  text-graySupport  ">
+          <p className="text-sm text-graySupport">
             Calendar widget with clear timezone differences information. Click
             on the widget to interact with it.
           </p>
         </div>
-      </div>
 
-      <div className=" w-full flex  items-center place-items-center justify-center place-content-center  relative">
+        <div className="pl-3 flex gap-2">
+          <StackText text="React" />
+          <StackText text="Tailwind CSS" />
+          <StackText text="Motion (prev. Framer Motion)" />
+        </div>
+      </section>
+
+      <section className="w-full flex items-center justify-center relative">
         <CalendarCard
           title="Team Standup"
           timeIn="2024-03-03T10:00:00.000Z"
@@ -30,7 +37,14 @@ export default function Home() {
             "https://randomuser.me/api/portraits/men/3.jpg",
           ]}
         />
-      </div>
-    </div>
+      </section>
+
+      <Link
+        href="/contextual"
+        className=" bg-white/5 rounded-lg shadow-[0px_1px_2px_0px_#0000001F]  w-max p-[6px_10px] text-sm font-medium"
+      >
+        Next Task
+      </Link>
+    </main>
   );
 }

@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="max-w-[130rem] w-full space-y-6 items-center shadow-[0px_0px_0px_1px_#09090B0D] rounded-[32px] grid grid-cols-1 md:grid-cols-2 min-h-[90vh] max-h-[40rem] h-full bg-white p-6 lg:px-8 gap-6">
+    <main className=" relative max-w-[130rem] w-full space-y-6 items-center shadow-[0px_0px_0px_1px_#09090B0D] rounded-[32px] grid grid-cols-1 md:grid-cols-2 min-h-[90vh] max-h-[40rem] h-full bg-white p-6 lg:px-8 gap-6">
       <section className="w-full md:w-[20rem] flex flex-col items-center justify-center gap-y-3 rounded-lg">
         <div className="flex flex-col gap-y-3 px-2 tracking-[0]">
           <h2 className="text-base text-grayMain font-medium">
@@ -41,7 +41,7 @@ export default function Home() {
 
       <Link
         href="/contextual"
-        className=" bg-white/5 rounded-lg shadow-[0px_1px_2px_0px_#0000001F]  w-max p-[6px_10px] text-sm font-medium"
+        className=" lg:absolute bottom-[10%] left-[2%] bg-white/5 rounded-lg shadow-[0px_1px_2px_0px_#0000001F]  w-max p-[6px_10px] text-sm font-medium"
       >
         Next Task
       </Link>

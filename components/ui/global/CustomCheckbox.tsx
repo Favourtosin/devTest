@@ -14,7 +14,7 @@ const CustomCheckbox = () => {
         }`}
       onClick={() => setChecked(!checked)}
     >
-      {checked && <Check size={10} className="text-white" />}
+      {checked && <Check size={13} className="text-white" />}
     </div>
   );
 };

@@ -31,7 +31,7 @@ const ContextualLayout = () => {
   };
 
   return (
-    <div className="h-full w-[70%] flex flex-col">
+    <div className="h-full w-[80%] flex flex-col">
       <div className="flex flex-col justify-end gap-y-4 shadow-[0px_0px_0px_1px_#09090B0D] rounded-[18px] p-4 items-center mt-auto">
         {/* Animated Content Wrapper */}
         <motion.div

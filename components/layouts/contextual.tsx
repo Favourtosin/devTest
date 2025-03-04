@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Webhook from "../features/webhook";
 import Repository from "../features/repository";
 import CreateApiKey from "../features/createApikey";
+import ShareApiKey from "../features/shareApikey";
 
 const tabs = [
   { id: "create", label: "Create Webhook" },
@@ -23,7 +24,7 @@ const ContextualLayout = () => {
       case "connect":
         return <Repository />;
       case "create-api":
-        return <CreateApiKey />;
+        return <ShareApiKey />;
       default:
         return null;
     }

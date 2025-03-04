@@ -6,3 +6,13 @@
     font-family: 'inter';
     src: url('/fonts/inter.ttf');
 }
+
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}

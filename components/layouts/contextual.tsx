@@ -12,6 +12,7 @@ const tabs = [
   { id: "create", label: "Create Webhook" },
   { id: "connect", label: "Connect Repositories" },
   { id: "create-api", label: "Create API Keys" },
+  { id: "share-api", label: "Share API Keys" },
 ];
 
 const ContextualLayout = () => {
@@ -24,6 +25,8 @@ const ContextualLayout = () => {
       case "connect":
         return <Repository />;
       case "create-api":
+        return <CreateApiKey />;
+      case "share-api":
         return <ShareApiKey />;
       default:
         return null;
@@ -31,9 +34,8 @@ const ContextualLayout = () => {
   };
 
   return (
-    <div className="h-full w-[80%] flex flex-col">
+    <div className="h-full w-[85%] flex flex-col">
       <div className="flex flex-col justify-end gap-y-4 shadow-[0px_0px_0px_1px_#09090B0D] rounded-[18px] p-4 items-center mt-auto">
-        {/* Animated Content Wrapper */}
         <motion.div
           layout
           className="w-full bg-white rounded-lg flex flex-col justify-end items-center overflow-hidden"
@@ -61,23 +63,30 @@ const ContextualLayout = () => {
           </AnimatePresence>
         </motion.div>
 
-        {/* Tab Navigation */}
-        <div className="relative overflow-hidden w-full flex flex-wrap items-center rounded-lg gap-2">
-          <div className="flex gap-2">
-            {tabs.map((tab) => (
-              <button
-                key={tab.id}
-                className={`whitespace-nowrap flex items-center justify-center transition-all text-sm font-medium px-1 w-max min-w-[138px] h-[36px] rounded-[10px] 
-                  ${
-                    activeTab === tab.id
-                      ? "bg-gray-100 text-[#424242]"
-                      : "text-gray-600 hover:text-gray-800 bg-white"
-                  }`}
-                onClick={() => setActiveTab(tab.id)}
-              >
-                {tab.label}
-              </button>
-            ))}
+        <div className="relative w-full rounded-lg">
+          <div className="overflow-x-auto whitespace-nowrap hide-scrollbar">
+            <div className="flex gap-2 w-max">
+              <AnimatePresence mode="popLayout">
+                {tabs.map((tab) => (
+                  <motion.button
+                    key={tab.id}
+                    className={`whitespace-nowrap flex items-center justify-center transition-all text-sm font-medium px-1 w-max min-w-[138px] h-[36px] rounded-[10px] 
+                      ${
+                        activeTab === tab.id
+                          ? "bg-gray-100 text-[#424242]"
+                          : "text-gray-600 hover:text-gray-800 bg-white"
+                      }`}
+                    onClick={() => setActiveTab(tab.id)}
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    transition={{ duration: 0.4 }}
+                  >
+                    {tab.label}
+                  </motion.button>
+                ))}
+              </AnimatePresence>
+            </div>
           </div>
 
           <div className="absolute -right-4 top-1/2 border-l px-3 border-opacity-[5%] transform h-[37px] bg-white -translate-y-1/2 flex items-center">

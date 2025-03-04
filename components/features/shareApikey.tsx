@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ClipboardCopy, Check } from "lucide-react";
+import { ClipboardCopy, Check, Copy } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import Title from "../ui/global/title";
@@ -20,7 +20,7 @@ const ShareApiKey: React.FC = () => {
         transition={{ duration: 0.3, ease: "easeInOut" }}
         className="max-w-lg w-full p-6 flex flex-col gap-y-5 bg-[#FCFCFC] shadow-[0px_0px_0px_1px #09090B0D] rounded-[10px]"
       >
-        <section className="flex flex-col gap-y-2">
+        <section className="flex flex-col gap-y-3">
           <div className="flex justify-between items-center w-full">
             <div className="flex flex-col">
               <Title text={isToggled ? "Sharing is on" : "Sharing is off"} />
@@ -50,36 +50,27 @@ const ShareApiKey: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.3 }}
+                className=" flex flex-col gap-y-2"
               >
-                <div className="relative">
-                  <input
-                    id="endpoint"
-                    type="text"
-                    placeholder="API key name"
-                    className="py-2 px-3 pr-10 rounded-[10px] w-full shadow-[0px_1px_2px_0px_#1212170D] placeholder:text-[#A3A3A3]"
-                  />
-                </div>
+                <input
+                  id="endpoint"
+                  type="text"
+                  placeholder="/mylink.com"
+                  className="py-2 px-3 pr-10 rounded-[10px] outline-none border-none w-full shadow-[0px_1px_2px_0px_#1212170D] placeholder:text-[#A3A3A3]"
+                />
 
                 <motion.span
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.3, delay: 0.1 }}
-                  className="flex gap-x-1 items-center rounded-lg p-[6px_10px] w-max shadow-[0px_1px_2px_0px_#0000001F] text-grayMain"
+                  className="flex gap-x-1 items-center rounded-lg p-[6px_10px] w-max shadow-[0px_1px_2px_0px_#0000001F] text-grayMain cursor-pointer"
                 >
                   <button
-                    className={`w-max p-2 rounded-md ${
-                      isCopied
-                        ? "bg-green-500"
-                        : "bg-gray-300 hover:bg-purpleDeep/20"
-                    }`}
+                    className={`w-max p-2 rounded-md  text-graySupport`}
                     onClick={() => handleCopy(apiKey)}
                   >
-                    {isCopied ? (
-                      <Check size={16} color="white" />
-                    ) : (
-                      <ClipboardCopy size={14} />
-                    )}
+                    <Copy size={14} />
                   </button>
                   <p className="font-medium text-sm">Copy</p>
                 </motion.span>

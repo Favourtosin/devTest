@@ -1,8 +1,5 @@
 "use client";
 import ContextualLayout from "@/components/layouts/contextual";
-import CalendarCard from "@/components/ui/calendarCard";
-import CustomCheckbox from "@/components/ui/global/CustomCheckbox";
-import Image from "next/image";
 
 export default function ContextualPage() {
   return (
@@ -10,7 +7,6 @@ export default function ContextualPage() {
       <div className=" w-full flex  justify-center  items-center  flex-col  rounded-lg p-4">
         <div className=" w-full md:w-[20rem] tracking-[0] ">
           <h2 className="text-base  text-grayMain font-medium ">
-            {" "}
             Contextual toolbar
           </h2>
           <p className="  text-sm mt-2  text-graySupport  ">

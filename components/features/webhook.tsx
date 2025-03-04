@@ -14,7 +14,6 @@ const Webhook: React.FC = () => {
   return (
     <section className=" flex flex-col  gap-y-3 w-full">
       <div className="max-w-lg h-auto  w-full p-6 flex flex-col gap-y-5 bg-[#FCFCFC]  shadow-[0px_0px_0px_1px_#09090B0D]  rounded-[10px]">
-        {/* Endpoint Input Section */}
         <section className=" flex flex-col gap-y-2">
           <Title text="  Endpoint" />
           <input

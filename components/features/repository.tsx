@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import RoundedCustomCheckbox from "../ui/global/roundedCheckBox";
 import CustomCheckbox from "../ui/global/CustomCheckbox";
 import Title from "../ui/global/title";
 import Paragraph from "../ui/global/paragraph";

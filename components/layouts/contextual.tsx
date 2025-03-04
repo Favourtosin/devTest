@@ -5,14 +5,13 @@ import { Menu } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Webhook from "../features/webhook";
 import Repository from "../features/repository";
+import CreateApiKey from "../features/createApikey";
 
 const tabs = [
   { id: "create", label: "Create Webhook" },
   { id: "connect", label: "Connect Repositories" },
   { id: "create-api", label: "Create API Keys" },
 ];
-
-const CreateAPI = () => <div className="p-4">🛠 Create API Keys Component</div>;
 
 const ContextualLayout = () => {
   const [activeTab, setActiveTab] = useState("create");
@@ -24,7 +23,7 @@ const ContextualLayout = () => {
       case "connect":
         return <Repository />;
       case "create-api":
-        return <CreateAPI />;
+        return <CreateApiKey />;
       default:
         return null;
     }
@@ -53,7 +52,7 @@ const ContextualLayout = () => {
               initial={{ opacity: 0.5, y: 30, scaleY: 0.9 }}
               animate={{ opacity: 1, y: 0, scaleY: 1 }}
               exit={{ opacity: 0.5, y: -20, scaleY: 0.9 }}
-              transition={{ duration: 0.5, ease: "easeOut" }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
               className="w-full"
             >
               {renderComponent()}

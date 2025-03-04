@@ -6,12 +6,13 @@ import Title from "../ui/global/title";
 import Paragraph from "../ui/global/paragraph";
 import ToggleSwitch from "../ui/global/toggleSwitch";
 import useClipboard from "@/hooks/useClipboard";
+import Toast from "../ui/global/toast";
 
 const ShareApiKey: React.FC = () => {
   const [apiKey] = useState("sk-1234-5678-ABCD");
   const [isToggled, setIsToggled] = useState(false);
+  const [isKeyCopied, setIsKeyCopied] = useState(false);
   const { isCopied, handleCopy } = useClipboard();
-
   return (
     <section className="flex flex-col gap-y-3 w-full">
       <motion.div
@@ -64,6 +65,7 @@ const ShareApiKey: React.FC = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.3, delay: 0.1 }}
+                  onClick={() => setIsKeyCopied(true)}
                   className="flex gap-x-1 items-center rounded-lg p-[6px_10px] w-max shadow-[0px_1px_2px_0px_#0000001F] text-grayMain cursor-pointer"
                 >
                   <button
@@ -86,6 +88,12 @@ const ShareApiKey: React.FC = () => {
           </button>
         </section>
       </motion.div>
+
+      <Toast
+        show={isKeyCopied}
+        setShow={setIsKeyCopied}
+        message="Link to secret key copied!"
+      />
     </section>
   );
 };

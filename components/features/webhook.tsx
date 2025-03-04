@@ -1,21 +1,8 @@
 import React, { useState } from "react";
 import RoundedCustomCheckbox from "../ui/global/roundedCheckBox";
 import CustomCheckbox from "../ui/global/CustomCheckbox";
-
-function Title({ text }: { text: string }) {
-  return (
-    <h1 className=" font-medium  text-sm tracking-normal  text-grayMain">
-      {text}
-    </h1>
-  );
-}
-function Paragraph({ text }: { text: string }) {
-  return (
-    <span className="text-[13px] leading-[19.5px]   text-graySupport tracking-normal">
-      {text}
-    </span>
-  );
-}
+import Paragraph from "../ui/global/title";
+import Title from "../ui/global/title";
 
 const Webhook: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
@@ -60,7 +47,6 @@ const Webhook: React.FC = () => {
           </div>
         </section>
 
-        {/* Events Section */}
         <section className="flex flex-col gap-y-[10px]">
           <Title text="Events" />
           <div className="grid bg-[#F5F5F5] p-4 rounded-[10px] grid-cols-2 gap-4 ">
@@ -81,7 +67,6 @@ const Webhook: React.FC = () => {
             ))}
           </div>
 
-          {/* Buttons */}
           <div className="flex justify-end gap-4   tracking-normal font-medium">
             <button className="px-4 py-2  text-grayMain  text-sm  ">
               Cancel

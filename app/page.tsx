@@ -41,7 +41,7 @@ export default function Home() {
 
       <Link
         href="/contextual"
-        className="lg:absolute bottom-[10%] left-[2%] bg-white/5 hover:bg-gray-300 rounded-lg shadow-[0px_1px_2px_0px_#0000001F] w-max p-[6px_10px] text-sm font-medium transition-colors duration-300 hover:animate-shake"
+        className="lg:absolute bottom-[10%] left-[2%] bg-white/5 hover:bg-gray-300 rounded-lg shadow-[0px_0px_0px_1px_#00000014,0px_1px_2px_0px_#0000001F] w-max p-[6px_10px] text-sm font-medium transition-colors duration-300 hover:animate-shake"
       >
         Next Task
       </Link>

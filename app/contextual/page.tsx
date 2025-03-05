@@ -33,7 +33,7 @@ export default function ContextualPage() {
       <section className=" pl-[10%]">
         <Link
           href="/"
-          className="hover:animate-shake hover:bg-gray-300 transition-colors duration-300transition-colors duration-300  bg-white/5 rounded-lg shadow-[0px_1px_2px_0px_#0000001F]  w-max p-[6px_10px] text-sm font-medium"
+          className="hover:animate-shake hover:bg-gray-300 transition-colors duration-300transition-colors duration-300  bg-white/5 rounded-lg shadow-[0px_0px_0px_1px_#00000014,0px_1px_2px_0px_#0000001F]  w-max p-[6px_10px] text-sm font-medium"
         >
           Previous Task
         </Link>

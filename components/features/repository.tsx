@@ -25,8 +25,7 @@ const Repository: React.FC = () => {
                 key={event.id}
                 className="flex items-center gap-2 cursor-pointer"
               >
-                <CustomCheckbox />
-                <Paragraph text={event.label} />
+                <CustomCheckbox text={event.label} />
               </div>
             ))}
           </div>

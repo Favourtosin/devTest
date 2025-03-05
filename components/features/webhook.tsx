@@ -7,7 +7,9 @@ import Acme from "../ui/global/acme";
 import Button from "../ui/global/button";
 
 const Webhook: React.FC = () => {
-  const [selectedProject, setSelectedProject] = useState<string | null>(null);
+  const [selectedProject, setSelectedProject] = useState<string | null>(
+    "allTeam"
+  );
 
   const handleProjectChange = (project: string) => {
     setSelectedProject(selectedProject === project ? null : project);
@@ -30,25 +32,18 @@ const Webhook: React.FC = () => {
         <section className=" flex flex-col gap-y-2">
           <Title text="Projects" />
           <div className="flex items-center gap-4 ">
-            <div className="flex items-center gap-2 cursor-pointer">
-              <RoundedCustomCheckbox
-                checked={selectedProject === "allTeam"}
-                onChange={() => handleProjectChange("allTeam")}
-              />
-              <div className=" flex gap-x-2 items-center justify-center">
-                <Paragraph text="All team projects in" />
+            <RoundedCustomCheckbox
+              text="All team projects in"
+              showAcme={true}
+              checked={selectedProject === "allTeam"}
+              onChange={() => handleProjectChange("allTeam")}
+            />
 
-                <Acme />
-              </div>
-            </div>
-
-            <div className="flex items-center gap-2 cursor-pointer">
-              <RoundedCustomCheckbox
-                checked={selectedProject === "tagged"}
-                onChange={() => handleProjectChange("tagged")}
-              />
-              <Paragraph text="Tagged Projects" />
-            </div>
+            <RoundedCustomCheckbox
+              text="Tagged Projects"
+              checked={selectedProject === "tagged"}
+              onChange={() => handleProjectChange("tagged")}
+            />
           </div>
         </section>
 
@@ -66,8 +61,7 @@ const Webhook: React.FC = () => {
                 key={event.id}
                 className="flex items-center gap-2 cursor-pointer"
               >
-                <CustomCheckbox />
-                <Paragraph text={event.label} />
+                <CustomCheckbox text={event.label} />
               </div>
             ))}
           </div>
@@ -76,7 +70,7 @@ const Webhook: React.FC = () => {
             <Button cta="Cancel" className=" bg-none text-grayMain " />
             <Button
               cta="Create webhook"
-              className="bg-purpleDeep  shadow-[0px_1px_2px_0px_#2E125E66] text-white "
+              className="bg-purpleDeep blur-[0px_0px_0px_1px_#7839EE]  shadow-[0px_1px_2px_0px_#2E125E66] text-white "
             />
           </div>
         </section>

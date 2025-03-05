@@ -4,7 +4,9 @@ import Title from "../ui/global/title";
 import Button from "../ui/global/button";
 
 const CreateApiKey: React.FC = () => {
+
   const [apiKey, setApiKey] = useState("");
+  
   return (
     <section className=" flex flex-col  gap-y-3 w-full">
       <div className="max-w-lg h-auto  w-full p-6 flex flex-col gap-y-5 bg-[#FCFCFC]  shadow-[0px_0px_0px_1px_#09090B0D]  rounded-[10px]">

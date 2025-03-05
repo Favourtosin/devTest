@@ -1,21 +1,27 @@
 import React, { useState } from "react";
 import { Check } from "lucide-react";
 
-const CustomCheckbox = () => {
+const CustomCheckbox = ({ text }: { text: string }) => {
   const [checked, setChecked] = useState(false);
 
   return (
-    <div
-      className={`relative w-3.5 h-3.5 rounded-[3px] flex items-center justify-center cursor-pointer
-        ${
-          checked
-            ? "  bg-purpleDeep shadow-none"
-            : " shadow-[0px_1px_2px_0px_#0000001F] bg-white"
-        }`}
+    <label
+      className="flex items-center gap-2 cursor-pointer select-none"
       onClick={() => setChecked(!checked)}
     >
-      {checked && <Check size={13} className="text-white" />}
-    </div>
+      <div
+        className={`relative w-3.5 h-3.5 rounded-[3px] flex items-center justify-center
+          ${
+            checked
+              ? "bg-purpleDeep shadow-none"
+              : "shadow-[0px_1px_2px_0px_#0000001F] bg-white"
+          }`}
+      >
+        {checked && <Check size={13} className="text-white" />}
+      </div>
+
+      <p className="text-xx text-graySupport tracking-normal">{text}</p>
+    </label>
   );
 };
 

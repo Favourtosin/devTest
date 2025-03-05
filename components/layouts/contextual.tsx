@@ -81,11 +81,9 @@ const ContextualLayout = () => {
           </AnimatePresence>
         </motion.div>
 
-        {/* Scrollable Tabs with Dynamic Indicator */}
         <div className="relative w-full rounded-lg">
           <div className="overflow-x-auto whitespace-nowrap hide-scrollbar relative">
             <div className="flex gap-2 w-max relative">
-              {/* Active Tab Indicator */}
               <motion.div
                 className="absolute bottom-0 h-[36px] rounded-[10px] bg-gray-100"
                 layoutId="activeTabIndicator"
@@ -118,9 +116,10 @@ const ContextualLayout = () => {
             </div>
           </div>
 
-          {/* Scroll Indicator */}
-          <div className="absolute -right-4 top-1/2 border-l px-3 z-20 border-opacity-[5%] transform h-[37px] bg-white -translate-y-1/2 flex items-center">
-            <Menu size={20} className="text-gray-600 cursor-pointer" />
+          <div className="absolute  -right-4 top-1/2 border-l px-3 z-20 border-opacity-[5%] transform h-[37px] bg-white -translate-y-1/2 flex items-center">
+            <span className=" p-1 rounded-lg hover:bg-gray-100">
+              <Menu size={20} className="text-gray-600 cursor-pointer" />
+            </span>
           </div>
         </div>
       </div>

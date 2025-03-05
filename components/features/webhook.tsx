@@ -5,6 +5,14 @@ import Title from "../ui/global/title";
 import Button from "../ui/global/button";
 import Input from "../ui/global/input";
 
+const checkOptions = [
+  { id: "deploymentCreated", label: "Deployment Created" },
+  { id: "projectCreated", label: "Project Created" },
+  { id: "deploymentError", label: "Deployment Error" },
+  { id: "projectDeleted", label: "Project Deleted" },
+  { id: "deploymentCancelled", label: "Deployment Cancelled" },
+];
+
 const Webhook: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<string | null>(
     "allTeam"
@@ -48,13 +56,7 @@ const Webhook: React.FC = () => {
           <section className="flex flex-col gap-y-[14px]">
             <Title text="Events" />
             <div className="grid bg-[#F5F5F5] p-4 rounded-[10px] grid-cols-2 gap-4 ">
-              {[
-                { id: "deploymentCreated", label: "Deployment Created" },
-                { id: "projectCreated", label: "Project Created" },
-                { id: "deploymentError", label: "Deployment Error" },
-                { id: "projectDeleted", label: "Project Deleted" },
-                { id: "deploymentCancelled", label: "Deployment Cancelled" },
-              ].map((event) => (
+              {checkOptions.map((event) => (
                 <div
                   key={event.id}
                   className="flex items-center gap-2 cursor-pointer"

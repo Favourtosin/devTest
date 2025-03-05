@@ -2,6 +2,7 @@
 
 import CalendarCard from "@/components/ui/calendar/calendarCard";
 import StackText from "@/components/ui/global/StackText";
+import { caller } from "@/data/callers";
 import Link from "next/link";
 
 export default function Home() {
@@ -27,15 +28,11 @@ export default function Home() {
 
       <section className="w-full flex items-center justify-center relative">
         <CalendarCard
-          title="Team Standup"
-          timeIn="2024-03-03T10:00:00.000Z"
-          startTime="2024-03-03T10:00:00.000Z"
-          endTime="2024-03-03T10:45:00.000Z"
-          participants={[
-            "https://randomuser.me/api/portraits/men/1.jpg",
-            "https://randomuser.me/api/portraits/women/2.jpg",
-            "https://randomuser.me/api/portraits/men/3.jpg",
-          ]}
+          title={caller.title}
+          timeIn={caller.timeIn}
+          startTime={caller.startTime}
+          endTime={caller.endTime}
+          participants={caller.participants}
         />
       </section>
 

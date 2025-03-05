@@ -8,7 +8,7 @@ interface ToggleSwitchProps {
 const ToggleSwitch: React.FC<ToggleSwitchProps> = ({ isOn, toggle }) => {
   return (
     <div
-      className={`w-11 h-6 shadow-[0px_2px_4px_0px_#0000000A,0px_0px_8px_0px_#00000005_inset,0px_0px_0px_0.75px_#0000000F_inset,0px_2px_4px_0px_#0000000A_inset,0px_1px_1px_0px_#0000000A_inset]
+      className={` min-w-11 w-11 h-6 shadow-[0px_2px_4px_0px_#0000000A,0px_0px_8px_0px_#00000005_inset,0px_0px_0px_0.75px_#0000000F_inset,0px_2px_4px_0px_#0000000A_inset,0px_1px_1px_0px_#0000000A_inset]
   flex items-center  inset-1 ${
     isOn ? " bg-[#875BF7]" : "bg-[#E5E5E5]"
   } rounded-[99px] p-[2px_4px] cursor-pointer transition duration-300`}

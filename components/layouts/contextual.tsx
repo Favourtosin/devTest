@@ -53,10 +53,10 @@ const ContextualLayout = () => {
 
   return (
     <div className="h-full w-[85%] flex flex-col">
-      <div className="flex flex-col justify-end gap-y-4 shadow-[0px_0px_0px_1px_#09090B0D] rounded-[18px] p-4 items-center mt-auto">
+      <div className="flex flex-col justify-end gap-y-4 shadow-[0px_8px_16px_0px_#0000000A,0px_4px_8px_0px_#0000000A,0px_0px_0px_1px_#09090B0D] rounded-[18px] p-4 items-center mt-auto">
         <motion.div
           layout
-          className="w-full bg-white rounded-lg flex flex-col justify-end items-center overflow-hidden"
+          className="w-full bg-white  rounded-lg flex flex-col justify-end items-center overflow-hidden"
           initial={{ scaleY: 0.95, opacity: 0 }}
           animate={{ scaleY: 1, opacity: 1 }}
           transition={{
@@ -74,7 +74,7 @@ const ContextualLayout = () => {
               animate={{ opacity: 1, y: 0, scaleY: 1 }}
               exit={{ opacity: 0.5, y: -20, scaleY: 0.9 }}
               transition={{ duration: 0.4, ease: "easeInOut" }}
-              className="w-full"
+              className="w-full flex justify-center items-center"
             >
               {renderComponent()}
             </motion.div>
@@ -85,7 +85,7 @@ const ContextualLayout = () => {
           <div className="overflow-x-auto whitespace-nowrap hide-scrollbar relative">
             <div className="flex gap-2 w-max relative">
               <motion.div
-                className="absolute bottom-0 h-[36px] rounded-[10px] bg-gray-100"
+                className="absolute bottom-0 h-[36px] rounded-[10px] bg-gray-100 text-[#424242] "
                 layoutId="activeTabIndicator"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}

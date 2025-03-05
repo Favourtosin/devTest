@@ -33,7 +33,7 @@ const CalendarCard: React.FC<CalendarCardProps> = ({
         transformOrigin: "top right",
       }}
       animate={{
-        width: isExpanded ? "80%" : 200,
+        width: isExpanded ? "82%" : 200,
         scale: isExpanded ? 1.15 : 1,
         opacity: 1,
         borderRadius: isExpanded ? "20px" : "12px",

@@ -1,6 +1,6 @@
 "use client";
 
-import CalendarCard from "@/components/ui/calendarCard";
+import CalendarCard from "@/components/ui/calendar/calendarCard";
 import StackText from "@/components/ui/global/StackText";
 import Link from "next/link";
 

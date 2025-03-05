@@ -19,7 +19,7 @@ export default function ContextualPage() {
               changing to another page or context.
             </p>
           </div>
-          <div className="pl-3 flex flex-col md:flex-row gap-2">
+          <div className="  pl-0 md:pl-3 flex flex-col md:flex-row gap-2">
             <StackText text="React" />
             <StackText text="Tailwind CSS" />
             <StackText text="Motion (prev. Framer Motion)" />

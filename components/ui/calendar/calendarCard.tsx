@@ -25,7 +25,7 @@ const CalendarCard: React.FC<CalendarCardProps> = ({
 
   return (
     <motion.div
-      className="bg-white rounded-[18px] shadow-[0px_8px_16px_0px_#0000000A,0px_4px_8px_0px_#0000000A,0px_0px_0px_1px_#09090B0D] overflow-hidden cursor-pointer"
+      className="bg-white ease-in rounded-[18px] shadow-[0px_8px_16px_0px_#0000000A,0px_4px_8px_0px_#0000000A,0px_0px_0px_1px_#09090B0D] overflow-hidden cursor-pointer"
       initial={{
         width: 200,
         scale: 1,
@@ -33,16 +33,16 @@ const CalendarCard: React.FC<CalendarCardProps> = ({
         transformOrigin: "top right",
       }}
       animate={{
-        width: isExpanded ? "82%" : 200,
+        width: isExpanded ? "80%" : 200,
         scale: isExpanded ? 1.15 : 1,
         opacity: 1,
         borderRadius: isExpanded ? "20px" : "12px",
       }}
       transition={{
         type: "spring",
-        stiffness: 100,
-        damping: 20,
-        mass: 0.2,
+        stiffness: 80,
+        damping: 18,
+        mass: 0.3,
       }}
       onClick={() => setIsExpanded(!isExpanded)}
     >

@@ -22,7 +22,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="pl-3 flex gap-2 flex-col md:flex-row">
+        <div className="pl-0 md:pl-3 flex gap-2 flex-col md:flex-row">
           <StackText text="React" />
           <StackText text="Tailwind CSS" />
           <StackText text="Motion (prev. Framer Motion)" />

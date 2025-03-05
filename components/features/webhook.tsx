@@ -3,6 +3,8 @@ import RoundedCustomCheckbox from "../ui/global/roundedCheckBox";
 import CustomCheckbox from "../ui/global/CustomCheckbox";
 import Paragraph from "../ui/global/title";
 import Title from "../ui/global/title";
+import Acme from "../ui/global/acme";
+import Button from "../ui/global/button";
 
 const Webhook: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
@@ -13,7 +15,8 @@ const Webhook: React.FC = () => {
 
   return (
     <section className=" flex flex-col  gap-y-3 w-full">
-      <div className="max-w-lg h-auto  w-full p-6 flex flex-col gap-y-5 bg-[#FCFCFC]  shadow-[0px_0px_0px_1px_#09090B0D]  rounded-[10px]">
+      <h1 className=" font-medium text-sm  text-grayMain">Create webhook</h1>
+      <div className="max-w-lg h-auto  w-full p-6 flex flex-col gap-y-5 bg-[#FCFCFC]  shadow-[0px_1px_2px_0px_#09090B0D]  rounded-[10px]">
         <section className=" flex flex-col gap-y-2">
           <Title text="  Endpoint" />
           <input
@@ -24,7 +27,6 @@ const Webhook: React.FC = () => {
           />
         </section>
 
-        {/* Projects Section */}
         <section className=" flex flex-col gap-y-2">
           <Title text="Projects" />
           <div className="flex items-center gap-4 ">
@@ -33,7 +35,11 @@ const Webhook: React.FC = () => {
                 checked={selectedProject === "allTeam"}
                 onChange={() => handleProjectChange("allTeam")}
               />
-              <Paragraph text="All team projects in" />
+              <div className=" flex gap-x-2 items-center justify-center">
+                <Paragraph text="All team projects in" />
+
+                <Acme />
+              </div>
             </div>
 
             <div className="flex items-center gap-2 cursor-pointer">
@@ -46,7 +52,7 @@ const Webhook: React.FC = () => {
           </div>
         </section>
 
-        <section className="flex flex-col gap-y-[10px]">
+        <section className="flex flex-col gap-y-[14px]">
           <Title text="Events" />
           <div className="grid bg-[#F5F5F5] p-4 rounded-[10px] grid-cols-2 gap-4 ">
             {[
@@ -67,12 +73,11 @@ const Webhook: React.FC = () => {
           </div>
 
           <div className="flex justify-end gap-4   tracking-normal font-medium">
-            <button className="px-4 py-2  text-grayMain  text-sm  ">
-              Cancel
-            </button>
-            <button className="px-4 py-2 bg-purpleDeep shadow-[0px_1px_2px_0px_#2E125E66] text-white rounded-lg hover:bg-purple-700">
-              Create Webhook
-            </button>
+            <Button cta="Cancel" className=" bg-none text-grayMain " />
+            <Button
+              cta="Create webhook"
+              className="bg-purpleDeep  shadow-[0px_1px_2px_0px_#2E125E66] text-white "
+            />
           </div>
         </section>
       </div>

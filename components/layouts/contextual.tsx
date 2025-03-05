@@ -7,13 +7,7 @@ import Webhook from "../features/webhook";
 import Repository from "../features/repository";
 import CreateApiKey from "../features/createApikey";
 import ShareApiKey from "../features/shareApikey";
-
-const tabs = [
-  { id: "create", label: "Create Webhook" },
-  { id: "connect", label: "Connect Repositories" },
-  { id: "create-api", label: "Create API Keys" },
-  { id: "share-api", label: "Share API Keys" },
-];
+import { tabs } from "@/data/tabLinks";
 
 const ContextualLayout = () => {
   const [activeTab, setActiveTab] = useState("create");
@@ -85,7 +79,7 @@ const ContextualLayout = () => {
           <div className="overflow-x-auto whitespace-nowrap hide-scrollbar relative">
             <div className="flex gap-2 w-max relative">
               <motion.div
-                className="absolute bottom-0 h-[36px] rounded-[10px] bg-gray-100 text-[#424242] "
+                className="absolute ease-in bottom-0 h-[36px] rounded-[10px] bg-gray-100 text-[#424242] "
                 layoutId="activeTabIndicator"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}

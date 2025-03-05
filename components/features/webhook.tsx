@@ -23,7 +23,7 @@ const Webhook: React.FC = () => {
   };
 
   return (
-    <section className=" flex flex-col justify-center items-center   w-full">
+    <section className=" flex flex-col justify-center items-center py-2  w-full">
       <section className="  w-[95%]  flex flex-col  justify-center  items-center   gap-y-3   ">
         <h1 className=" font-medium text-sm  w-full text-grayMain">
           Create webhook

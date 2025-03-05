@@ -8,7 +8,7 @@ const CreateApiKey: React.FC = () => {
   const [apiKey, setApiKey] = useState("");
 
   return (
-    <section className=" flex flex-col justify-center items-center   w-full">
+    <section className=" flex flex-col justify-center items-center  py-2  w-full">
       <section className="  w-[95%]  flex flex-col  justify-center  items-center   gap-y-3   ">
         <div className="max-w-lg h-auto  w-full p-4 flex flex-col gap-y-5 bg-[#FCFCFC]  shadow-[0px_1px_2px_0px_#09090B0D,0px_0px_0px_1px_#09090B0D]  rounded-[10px]">
           <section className=" flex flex-col gap-y-2">

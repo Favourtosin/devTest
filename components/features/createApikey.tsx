@@ -2,25 +2,22 @@ import React, { useState } from "react";
 import Paragraph from "../ui/global/title";
 import Title from "../ui/global/title";
 import Button from "../ui/global/button";
+import Input from "../ui/global/input";
 
 const CreateApiKey: React.FC = () => {
-
   const [apiKey, setApiKey] = useState("");
-  
+
   return (
     <section className=" flex flex-col  gap-y-3 w-full">
       <div className="max-w-lg h-auto  w-full p-6 flex flex-col gap-y-5 bg-[#FCFCFC]  shadow-[0px_0px_0px_1px_#09090B0D]  rounded-[10px]">
         <section className=" flex flex-col gap-y-2">
           <Title text="Create new API key" />
           <Paragraph text="Your secret API Key will be shared with all users belonging to your organization." />
-          <input
-            id="endpoint"
-            type="text"
-            value={apiKey}
+
+          <Input
             onChange={(e) => setApiKey(e.target.value)}
             placeholder="API key name"
-            className="  focus:shadow-[inset_0px_0px_0px_1px_#A48AFB] outline-none transition-all   py-2 px-3  rounded-[10px] w-full  shadow-[inset_0px_0px_0px_1px_#D6D6D6B2] text-black/85
- placeholder:text-[#A3A3A3]  "
+            value={apiKey}
           />
         </section>
 

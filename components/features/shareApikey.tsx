@@ -7,9 +7,9 @@ import ToggleSwitch from "../ui/global/toggleSwitch";
 import useClipboard from "@/hooks/useClipboard";
 import Toast from "../ui/global/toast";
 import Button from "../ui/global/button";
+import Input from "../ui/global/input";
 
 const ShareApiKey: React.FC = () => {
-  
   const [apiKey, setApiKey] = useState("");
   const [isToggled, setIsToggled] = useState(false);
   const [isKeyCopied, setIsKeyCopied] = useState(false);
@@ -55,13 +55,10 @@ const ShareApiKey: React.FC = () => {
                 transition={{ duration: 0.3 }}
                 className=" flex flex-col gap-y-2"
               >
-                <input
-                  id="endpoint"
-                  type="text"
-                  value={apiKey}
+                <Input
                   onChange={(e) => setApiKey(e.target.value)}
                   placeholder="/mylink.com"
-                  className="py-2 px-3 pr-10 rounded-[10px] outline-none border-none text-black/85 w-full shadow-[0px_1px_2px_0px_#1212170D] placeholder:text-[#A3A3A3] focus:shadow-[inset_0px_0px_0px_1px_#A48AFB] "
+                  value={apiKey}
                 />
 
                 <motion.span

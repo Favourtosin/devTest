@@ -3,6 +3,7 @@ import RoundedCustomCheckbox from "../ui/global/roundedCheckBox";
 import CustomCheckbox from "../ui/global/CustomCheckbox";
 import Title from "../ui/global/title";
 import Button from "../ui/global/button";
+import Input from "../ui/global/input";
 
 const Webhook: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<string | null>(
@@ -18,13 +19,9 @@ const Webhook: React.FC = () => {
       <h1 className=" font-medium text-sm  text-grayMain">Create webhook</h1>
       <div className="max-w-lg h-auto  w-full p-6 flex flex-col gap-y-5 bg-[#FCFCFC]  shadow-[0px_1px_2px_0px_#09090B0D]  rounded-[10px]">
         <section className=" flex flex-col gap-y-2">
-          <Title text="  Endpoint" />
-          <input
-            id="endpoint"
-            type="text"
-            placeholder="https://myapp.com/webhooks"
-            className="    py-2 px-3  rounded-[10px] w-full  shadow-[0px_1px_2px_0px_#1212170D] placeholder:text-[#A3A3A3] "
-          />
+          <Title text="Endpoint" />
+
+          <Input placeholder="https://myapp.com/webhooks" />
         </section>
 
         <section className=" flex flex-col gap-y-2">

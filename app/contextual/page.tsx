@@ -30,14 +30,15 @@ export default function ContextualPage() {
           <ContextualLayout />
         </div>
       </section>
-      <section className="pl-[10%]">
+
+      <div className=" w-1/2  flex  justify-start">
         <Link
           href="/"
-          className="lg:absolute bottom-[10%] left-[2%] bg-white/5 hover:bg-gray-300 rounded-lg shadow-[0px_0px_0px_1px_#00000014,0px_1px_2px_0px_#0000001F] w-max p-[6px_10px] text-sm font-medium transition-colors duration-300 hover:animate-shake"
+          className="bg-white/5  ml-[15%]  xl:ml-[20%] 2xl:ml-[30%] hover:bg-gray-300 rounded-lg shadow-[0px_0px_0px_1px_#00000014,0px_1px_2px_0px_#0000001F] w-max p-[6px_10px] text-sm font-medium transition-colors duration-300 hover:animate-shake"
         >
           Previous Task
         </Link>
-      </section>
+      </div>
     </main>
   );
 }

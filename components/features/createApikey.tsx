@@ -1,6 +1,4 @@
-import React, { useState } from "react";
-import RoundedCustomCheckbox from "../ui/global/roundedCheckBox";
-import CustomCheckbox from "../ui/global/CustomCheckbox";
+import React from "react";
 import Paragraph from "../ui/global/title";
 import Title from "../ui/global/title";
 import Button from "../ui/global/button";
@@ -16,7 +14,8 @@ const CreateApiKey: React.FC = () => {
             id="endpoint"
             type="text"
             placeholder="API key name"
-            className="    py-2 px-3  rounded-[10px] w-full  shadow-[0px_1px_2px_0px_#1212170D] placeholder:text-[#A3A3A3]  "
+            className="  focus:shadow-[inset_0px_0px_0px_1px_#A48AFB] outline-none transition-all   py-2 px-3  rounded-[10px] w-full  shadow-[inset_0px_0px_0px_1px_#D6D6D6B2]
+ placeholder:text-[#A3A3A3]  "
           />
         </section>
 

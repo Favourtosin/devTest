@@ -24,6 +24,17 @@ export default {
       fontSize: {
         xx: ["13px", { lineHeight: "19.5px" }],
       },
+      keyframes: {
+        shake: {
+          "0%, 100%": { transform: "translateX(0)" },
+          "25%": { transform: "translateX(-1px)" },
+          "50%": { transform: "translateX(1px)" },
+          "75%": { transform: "translateX(-1px)" },
+        },
+      },
+      animation: {
+        shake: "shake 0.3s ease-in-out",
+      },
     },
   },
   plugins: [],

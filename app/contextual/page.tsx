@@ -13,7 +13,7 @@ export default function ContextualPage() {
               Contextual toolbar
             </h2>
             <p className="  text-sm mt-2  text-graySupport  ">
-              A toolbar that suggests and enables actions based on users'
+              A toolbar that suggests and enables actions based on users&apos;
               navigation. <br /> <br /> Suggestions are related to the current
               page and users can perform actions inside the component, without
               changing to another page or context.

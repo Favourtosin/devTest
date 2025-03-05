@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import CustomCheckbox from "../ui/global/CustomCheckbox";
 import Title from "../ui/global/title";
 import Paragraph from "../ui/global/paragraph";

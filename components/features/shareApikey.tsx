@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ClipboardCopy, Check, Copy } from "lucide-react";
+import { Copy } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import Title from "../ui/global/title";
@@ -13,7 +13,7 @@ const ShareApiKey: React.FC = () => {
   const [apiKey] = useState("sk-1234-5678-ABCD");
   const [isToggled, setIsToggled] = useState(false);
   const [isKeyCopied, setIsKeyCopied] = useState(false);
-  const { isCopied, handleCopy } = useClipboard();
+  const { handleCopy } = useClipboard();
   return (
     <section className="flex flex-col gap-y-3 w-full">
       <motion.div

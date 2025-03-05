@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function ContextualPage() {
   return (
     <main className=" relative w-full h-full flex flex-col  gap-y-12 pb-[5%] max-w-[130rem] bg-white shadow-[0px_1px_2px_0px_#09090B0D,0px_0px_0px_1px_#09090B0D] rounded-[32px]  p-3 md:p-6">
-      <section className="  grid  grid-cols-1 lg:grid-cols-2 min-h-full md:min-h-[95vh]  h-full   gap-6">
+      <section className="  grid  grid-cols-1 lg:grid-cols-2 min-h-[95vh]  h-full   gap-6">
         <div className=" w-full flex  gap-y-4 justify-center  lg:items-center  flex-col  rounded-lg p-4">
           <div className=" w-full md:w-[20rem] tracking-[0] ">
             <h2 className="text-base  text-grayMain font-medium ">

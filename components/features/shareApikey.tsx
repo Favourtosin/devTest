@@ -10,7 +10,7 @@ import Toast from "../ui/global/toast";
 import Button from "../ui/global/button";
 
 const ShareApiKey: React.FC = () => {
-  const [apiKey] = useState("sk-1234-5678-ABCD");
+  const [apiKey, setApiKey] = useState("");
   const [isToggled, setIsToggled] = useState(false);
   const [isKeyCopied, setIsKeyCopied] = useState(false);
   const { handleCopy } = useClipboard();
@@ -57,8 +57,10 @@ const ShareApiKey: React.FC = () => {
                 <input
                   id="endpoint"
                   type="text"
+                  value={apiKey}
+                  onChange={(e) => setApiKey(e.target.value)}
                   placeholder="/mylink.com"
-                  className="py-2 px-3 pr-10 rounded-[10px] outline-none border-none w-full shadow-[0px_1px_2px_0px_#1212170D] placeholder:text-[#A3A3A3]"
+                  className="py-2 px-3 pr-10 rounded-[10px] outline-none border-none text-black/85 w-full shadow-[0px_1px_2px_0px_#1212170D] placeholder:text-[#A3A3A3] focus:shadow-[inset_0px_0px_0px_1px_#A48AFB] "
                 />
 
                 <motion.span
@@ -83,8 +85,13 @@ const ShareApiKey: React.FC = () => {
         </section>
 
         <section className="flex justify-end gap-4 tracking-normal font-medium">
-          <Button cta="Cancel" className=" bg-none text-grayMain " />
           <Button
+            onclick={() => setApiKey("")}
+            cta="Cancel"
+            className=" bg-none text-grayMain "
+          />
+          <Button
+            onclick={() => setApiKey("fakiyaoluwatosin@gmail.com")}
             cta=" Create secret key"
             className="bg-purpleDeep  shadow-[0px_0px_0px_1px_#7839EE] !px-3 text-white "
           />

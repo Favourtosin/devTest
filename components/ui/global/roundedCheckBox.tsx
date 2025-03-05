@@ -20,7 +20,7 @@ const RoundedCustomCheckbox: React.FC<CheckboxProps> = ({
       onClick={() => onChange(!checked)}
     >
       <div
-        className={`relative w-[20px] h-[20px] flex items-center justify-center rounded-full 
+        className={`relative w-[20px] min-w-[20px] h-[20px] flex items-center justify-center rounded-full 
           ${checked ? "bg-[#875BF7]" : "bg-[#FAFAFA]"} 
           shadow-[0px_0px_0px_1px_#00000014,0px_1px_2px_0px_#0000001F] transition-all`}
         role="checkbox"

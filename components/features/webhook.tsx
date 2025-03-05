@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import RoundedCustomCheckbox from "../ui/global/roundedCheckBox";
 import CustomCheckbox from "../ui/global/CustomCheckbox";
-import Paragraph from "../ui/global/title";
 import Title from "../ui/global/title";
-import Acme from "../ui/global/acme";
 import Button from "../ui/global/button";
 
 const Webhook: React.FC = () => {

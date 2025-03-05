@@ -1,7 +1,6 @@
 import React from "react";
 import CustomCheckbox from "../ui/global/CustomCheckbox";
 import Title from "../ui/global/title";
-import Paragraph from "../ui/global/paragraph";
 import Acme from "../ui/global/acme";
 import Button from "../ui/global/button";
 

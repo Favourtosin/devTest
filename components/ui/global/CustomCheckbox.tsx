@@ -10,10 +10,10 @@ const CustomCheckbox = ({ text }: { text: string }) => {
       onClick={() => setChecked(!checked)}
     >
       <div
-        className={`relative w-3.5 h-3.5 rounded-[3px] flex items-center justify-center
+        className={`relative min-w-3.5 min-h-3.5 w-3.5 h-3.5 rounded-[3px] flex items-center justify-center
           ${
             checked
-              ? "bg-purpleDeep  shadow-[0px_1px_2px_0px_#491C9699] "
+              ? "bg-purpleDeep  shadow-[0px_1px_2px_0px_#491C9699]"
               : " shadow-[0px_0px_0px_1px_#00000014,0px_1px_2px_0px_#0000001F] bg-white"
           }`}
       >

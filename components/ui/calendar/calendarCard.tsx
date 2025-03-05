@@ -76,7 +76,7 @@ const CalendarCard: React.FC<CalendarCardProps> = ({
             <div className="flex items-start justify-between">
               <div className="flex flex-col space-y-2">
                 <div className="flex items-center text-sm gap-x-2">
-                  <h2 className="text-grayMain">Guests</h2>
+                  <h2 className="text-grayMain font-medium">Guests</h2>
                   <Globe size={16} className="text-[#A3A3A3]" />
                   <p className="text-[#525252]">{participants.length}</p>
                 </div>

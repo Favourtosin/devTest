@@ -7,6 +7,7 @@ import Paragraph from "../ui/global/paragraph";
 import ToggleSwitch from "../ui/global/toggleSwitch";
 import useClipboard from "@/hooks/useClipboard";
 import Toast from "../ui/global/toast";
+import Button from "../ui/global/button";
 
 const ShareApiKey: React.FC = () => {
   const [apiKey] = useState("sk-1234-5678-ABCD");
@@ -19,7 +20,7 @@ const ShareApiKey: React.FC = () => {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="max-w-lg w-full p-6 flex flex-col gap-y-5 bg-[#FCFCFC] shadow-[0px_0px_0px_1px #09090B0D] rounded-[10px]"
+        className="max-w-lg w-full p-6 flex flex-col gap-y-5 bg-[#FCFCFC] shadow-[0px_0px_0px_1px_#09090B0D] rounded-[10px]"
       >
         <section className="flex flex-col gap-y-3">
           <div className="flex justify-between items-center w-full">
@@ -66,10 +67,10 @@ const ShareApiKey: React.FC = () => {
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.3, delay: 0.1 }}
                   onClick={() => setIsKeyCopied(true)}
-                  className="flex gap-x-1 items-center rounded-lg p-[6px_10px] w-max shadow-[0px_1px_2px_0px_#0000001F] text-grayMain cursor-pointer"
+                  className="flex items-center justify-center bg-white/5  gap-x-2 rounded-lg p-[6px_10px] w-max shadow-[0px_1px_2px_0px_#0000001F] text-grayMain cursor-pointer"
                 >
                   <button
-                    className={`w-max p-2 rounded-md  text-graySupport`}
+                    className="flex items-center justify-center  rounded-md text-graySupport"
                     onClick={() => handleCopy(apiKey)}
                   >
                     <Copy size={14} />
@@ -82,10 +83,11 @@ const ShareApiKey: React.FC = () => {
         </section>
 
         <section className="flex justify-end gap-4 tracking-normal font-medium">
-          <button className="px-4 py-2 text-grayMain text-sm">Cancel</button>
-          <button className="px-4 py-2 bg-purpleDeep shadow-[0px_1px_2px_0px_#2E125E66] text-white rounded-lg hover:bg-purpleDeep/90">
-            Create secret key
-          </button>
+          <Button cta="Cancel" className=" bg-none text-grayMain " />
+          <Button
+            cta=" Create secret key"
+            className="bg-purpleDeep  shadow-[0px_0px_0px_1px_#7839EE] !px-3 text-white "
+          />
         </section>
       </motion.div>
 

@@ -3,6 +3,7 @@ import CustomCheckbox from "../ui/global/CustomCheckbox";
 import Title from "../ui/global/title";
 import Paragraph from "../ui/global/paragraph";
 import Acme from "../ui/global/acme";
+import Button from "../ui/global/button";
 
 const Repository: React.FC = () => {
   return (
@@ -31,12 +32,11 @@ const Repository: React.FC = () => {
           </div>
 
           <div className="flex justify-end gap-4   tracking-normal font-medium">
-            <button className="px-4 py-2  text-grayMain  text-sm  ">
-              Cancel
-            </button>
-            <button className="px-4 py-2 bg-purpleDeep shadow-[0px_1px_2px_0px_#2E125E66] text-white rounded-lg hover:bg-purple-700">
-              Connect repositories
-            </button>
+            <Button cta="Cancel" className=" bg-none text-grayMain " />
+            <Button
+              cta="Connect repositories"
+              className="bg-purpleDeep  shadow-[0px_1px_2px_0px_#2E125E66] text-white "
+            />
           </div>
         </section>
       </div>

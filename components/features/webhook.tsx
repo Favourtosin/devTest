@@ -23,7 +23,7 @@ const Webhook: React.FC = () => {
             id="endpoint"
             type="text"
             placeholder="https://myapp.com/webhooks"
-            className="    py-2 px-3  rounded-[10px] w-full  shadow-[0px_1px_2px_0px_#1212170D] placeholder:text-[#A3A3A3]  "
+            className="    py-2 px-3  rounded-[10px] w-full  shadow-[0px_1px_2px_0px_#1212170D] placeholder:text-[#A3A3A3] "
           />
         </section>
 
